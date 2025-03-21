@@ -5,9 +5,9 @@ const emailTemplate = require('./email-template')
  * Configure the email transporter with SMTP credentials from environment variables.
  */
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
+    host: "smtp.gmail.com",
     port: Number(process.env.SMTP_PORT) || 587, // Default to 587 if not set
-    secure: process.env.SMTP_PORT === "465", // `true` for port 465 (SSL), `false` for others
+    secure: process.env.SMTP_PORT === "465", 
     auth: {
         user: "devs762001@gmail.com",
         pass: "ykcp kbwr daqv hhky",
