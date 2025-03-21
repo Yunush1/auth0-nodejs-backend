@@ -22,6 +22,12 @@ const jwtCheck = auth({
 // Apply JWT authentication to all routes
 app.use(jwtCheck);
 
+app.get("/",(req,res)=>{
+  res.status(200).json({
+    message:"Server is running "
+  })
+})
+
 /**
  * Protected Route (Requires valid token)
  * */ 
