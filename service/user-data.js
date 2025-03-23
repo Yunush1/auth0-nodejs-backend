@@ -1,8 +1,8 @@
 const axios = require('axios')
-
+require('dotenv').config()
 const getuser = async (accessToken)=>{
     try{
-      const response = await axios.get('https://dev-ss8hahvk572wlra3.us.auth0.com/userinfo',
+      const response = await axios.get(`${process.env.ISSUER_BASE_URL}/userinfo`,
         {
         headers:{
           authorization : `Bearer ${accessToken}`
